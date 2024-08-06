@@ -1,0 +1,97 @@
+Usurname: nicodev
+Password: @Mateo7171 
+
+En caso de que no funcione el npm start ejecutar este comando a nivel local:
+npm install react-scripts --save
+
+
+
+Codigos depronto para utilizar:
+
+-$ history (ver historial)
+
+-$pip list 
+
+-$ pip install virtualenv (instala la herramienta)
+
+-$ python -m venv env (Creación de un Entorno Virtua)
+
+-$ source env/Scripts/activate (Activar el entorno)
+
+-$ deactivate (Desactivar el entorno)
+
+-$ python -m django --version (ver la version de django)
+
+-$ pip install django (para instalar django)
+
+-$ django-admin startproject testadso . (para crear proyecto)
+
+-$ python manage.py help (ayuda de funciones para implementar)
+
+
+npx create-react-app mi-proyecto-react
+crear proyecto react
+
+py manage.py runserver
+
+py manage.py startapp usuarios
+
+$ py manage.py migrate (migrar datos)
+$ winpty py manage.py createsuperuser (crear super usuario)
+$ py manage.py makemigrations
+
+
+
+
+
+Formularios:
+
+Se crea un archivo form
+
+se crea una clase de formulario, y una inner clase "Meta" que tendra el modelo a usar y los campos de dicho modelo
+
+
+
+1. Crear entorno, proyecto y app
+2. registrar la app en settings -> InstalledApps
+3. Crear el modelo. Registrar el modelo en admin
+4. Hacer las migraciones
+5. Crear superusuario
+6. Correr el servidor
+7. sync the database manage.py migrate --run-syncdb .... por si falla
+8. instalar django rest framework... pip install djangorestframework
+9. registarlo en settings installed apps
+	"rest_framework",
+9.1. Consultar documentación de django rest framework
+(SERIALIZACION: para que sea API REST se deben convertir los objetos python a formato JSON)
+10. Crear archivo serializer.py dentro de la app API y codificarlo
+11. Codificar las vistas en views.py
+12. Crear dentro de la app urls.py y codificarlo
+13. Crear las rutas en la app y en el proyecto (urls.py)
+14. Generar la documentación de mi API. Instalar coreapi -> pip install coreapi 
+15 registrar en settings coreapi en INATALLED APPS
+16 Crear el path 'docs' en urls del proyecto 
+16 adicionar variable REST_FRAMEWORK en settings
+17. Instalar setuptools si genera error de configuración de python
+pip install setuptools. También hacer upgrade de setuptools sirve
+18. Instalar el paquete corsheaders: 
+ python -m pip install django-cors-headers
+19. Registrar en INSTALED_APPS la entrada corsheaders -> "corsheaders" 
+20. Registrar en MIDDLEWARE las entradas
+'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
+21. Crear en settings las variables 
+#Enable cors use in django - samuel
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then CORS_ALLOWED_ORIGINS will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+] # If this is used, then not need to use CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'http://localhost:8000',
+]
+
+
+
+
+http://127.0.0.1:8000/empleado/saludar/?nro_documento=1000381826
