@@ -26,7 +26,7 @@ class Empleado(models.Model):
     id_rol = models.ForeignKey(Rol, on_delete=models.CASCADE)
     estado_civil = models.CharField(max_length=20)
     correo = models.EmailField(unique=True)
-    contraseña = models.CharField(max_length=128)
+    contrasena = models.CharField(max_length=128)
     
     def __str__(self):
         return f"{self.nombres} {self.apellidos}"
